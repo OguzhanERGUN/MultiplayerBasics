@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class MyNetworkManager : NetworkManager
 {
-
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
         base.OnServerAddPlayer(conn);
@@ -13,7 +12,7 @@ public class MyNetworkManager : NetworkManager
 
         //Setting player name
         MyNetworkPlayer player = conn.identity.GetComponent<MyNetworkPlayer>();
-        player.SetDisplayName($"Player {numPlayers}");
+        player.SetDisplayName($"Player{numPlayers}");
 
 
         //Setting player teamcolor but doesnt check is there any same color. (it just make random color for now)
